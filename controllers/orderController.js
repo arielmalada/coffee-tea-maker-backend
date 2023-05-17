@@ -1,6 +1,13 @@
 const orderRouter = require('express').Router()
 const Order = require('../models/orderModel')
 
+
+orderRouter.get('/', (request, response) => {
+  Order.find({}).then(orders => {
+    response.json(orders)
+  })
+})
+
 orderRouter.post('/', (request, response, next) => {
   const body = request.body
 
