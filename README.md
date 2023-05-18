@@ -13,8 +13,8 @@ npm (Node Package Manager) or yarn
 To get started with this application: 
  - clone the backend repository `git clone https://github.com/arielmalada/coffee-tea-maker-backend.git`
  - run `cd coffee-tea-maker-backend && npm install` to install the necessary dependencies.
- - create a `.env` and set the appropriate values for your environment.
- - Then, run `npm start` to start the server.
+ - create a `.env` or put `.env` in the root project folder.
+ - Then, run `npm run dev` to start the server in dev environment or run `npm start` to start the server in production environment.
 
 ## Usage
 
