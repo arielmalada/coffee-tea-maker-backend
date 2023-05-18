@@ -26,5 +26,12 @@ orderRouter.post('/', (request, response, next) => {
     .catch(error => next(error))
 })
 
+orderRouter.post('/search', (request, response) => {
+  const query = new RegExp(request.body.query, 'i')
+  Order.find({name : query}).then(orders => {
+    response.json(orders)
+  })
+})
+
 
 module.exports = orderRouter;
